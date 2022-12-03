@@ -1,12 +1,13 @@
 <template>
   <header class="header">
     <h1>Super2Do</h1>
-    <form @submit="storeData">
+    <form @submit="storeData" id="storeForm">
       <input
         v-model="task.name"
-        class="new-todo"
+        class="new-todo input"
         :placeholder="placeholder"
         autofocus
+        ref="name"
       />
       <button type="submit"></button>
     </form>
@@ -23,7 +24,6 @@ export default {
 
   watch: {
     "task.name"(newTask) {
-      // console.log(newTask);
     },
   },
 
@@ -36,6 +36,7 @@ export default {
           console.log(error.response.task);
         })
         .finally(() => {
+          this.task.name = ""; 
           this.changeNeedUpdate(true);
         });
     },
