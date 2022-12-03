@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="todoapp">
     <LayoutsHeader
       placeholder="What needs to be done?"
       :changeNeedUpdate="changeNeedUpdate"
@@ -20,12 +20,6 @@
 </template>
 <script>
 export default {
-  css: [
-    '~/assets/css/base.css',
-    '~/assets/css/index.css',
-    '~/assets/css/app.css',
-  ],
-
   data() {
     return {
       fields: ["id", "name", "status"],
