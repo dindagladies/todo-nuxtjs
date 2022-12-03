@@ -20,6 +20,12 @@
 </template>
 <script>
 export default {
+  css: [
+    '~/assets/css/base.css',
+    '~/assets/css/index.css',
+    '~/assets/css/app.css',
+  ],
+
   data() {
     return {
       fields: ["id", "name", "status"],
@@ -88,6 +94,7 @@ export default {
       console.log(this.status, "in getStatus()");
     },
   },
+
 };
 </script>
 <style>

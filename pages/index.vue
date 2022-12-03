@@ -1,7 +1,3 @@
 <template>
-  <Tutorial/>
+  <Layouts/>
 </template>
-
-<script>
-export default {}
-</script>
